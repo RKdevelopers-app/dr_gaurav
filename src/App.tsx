@@ -27,6 +27,15 @@ import {
   Stethoscope
 } from 'lucide-react';
 
+import heroImg from './images/hero.png';
+import docImg from './images/doc.png';
+import before1Img from './images/before1.png';
+import after1Img from './images/after1.png';
+import before2Img from './images/before2.png';
+import after2Img from './images/after2.png';
+import before3Img from './images/before3.png';
+import after3Img from './images/after3.png';
+
 // --- Types ---
 
 interface Service {
@@ -80,9 +89,9 @@ const TESTIMONIALS: Testimonial[] = [
 ];
 
 const BEFORE_AFTER_DATA: BeforeAfter[] = [
-  { id: 1, category: "Acne Treatment", title: "Severe Acne to Clear Skin", before: "/src/images/before1.png", after: "/src/images/after1.png" },
-  { id: 2, category: "Hair Regrowth", title: "Hair Thinning Recovery", before: "/src/images/before2.png", after: "/src/images/after2.png" },
-  { id: 3, category: "Pigmentation", title: "Melasma Treatment Results", before: "/src/images/before3.png", after: "/src/images/after3.png" },
+  { id: 1, category: "Acne Treatment", title: "Severe Acne to Clear Skin", before: before1Img, after: after1Img },
+  { id: 2, category: "Hair Regrowth", title: "Hair Thinning Recovery", before: before2Img, after: after2Img },
+  { id: 3, category: "Pigmentation", title: "Melasma Treatment Results", before: before3Img, after: after3Img },
 ];
 
 // --- Components ---
@@ -285,7 +294,7 @@ export default function App() {
           >
             <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white">
               <img 
-                src="/src/images/hero.png" 
+                src={heroImg} 
                 alt="Dermatology Skin Care" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -315,7 +324,7 @@ export default function App() {
           <div className="order-2 lg:order-1">
             <div className="relative">
               <img 
-                src="/src/images/doc.png" 
+                src={docImg} 
                 alt="Dr Gaurav" 
                 className="rounded-3xl shadow-lg w-full min-h-[400px] bg-gray-100 object-cover"
                 referrerPolicy="no-referrer"
