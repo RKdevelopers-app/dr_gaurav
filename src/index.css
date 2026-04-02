@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-skin-50: #fffaf5;
+  --color-skin-100: #fdf2e9;
+  --color-skin-200: #fae5d3;
+  --color-skin-300: #f5cba7;
+  
+  --color-clinic-blue: #e0f2f1;
+  --color-clinic-teal: #00897b;
+  --color-clinic-accent: #d4a373;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-gray-800 bg-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.glass-nav {
+  @apply bg-white/80 backdrop-blur-md border-b border-gray-100;
+}
+
+.service-card {
+  @apply bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-50;
+}
+
+.btn-primary {
+  @apply bg-clinic-accent text-white px-8 py-3 rounded-full font-medium hover:opacity-90 transition-all shadow-lg hover:shadow-clinic-accent/20;
+}
+
+.btn-outline {
+  @apply border-2 border-clinic-accent text-clinic-accent px-8 py-3 rounded-full font-medium hover:bg-clinic-accent hover:text-white transition-all;
+}
+
+.section-padding {
+  @apply py-20 px-6 max-w-7xl mx-auto;
+}
